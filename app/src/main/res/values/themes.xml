@@ -2,7 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FinanceApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+       <item name="colorPrimary">@color/myyellow2</item>
+        <item name="android:colorBackground">@color/mygray2</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins</item>
     </style>
 
     <style name="Theme.FinanceApp" parent="Base.Theme.FinanceApp" />

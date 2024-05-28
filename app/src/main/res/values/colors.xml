@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="mygray1">#6a6b6f</color>
+    <color name="mygray2">	#515151</color>
+    <color name="mygreen">#bada55</color>
+    <color name="myred">#9f1d35</color>
+    <color name="myyellow1">#ffcc33</color>
+    <color name="myyellow2">#ecb939</color>
+    <color name="myyellow3">#f0c75e</color>
+    <color name="mybrown1">#726255</color>
+    <color name="mybrown2">#372e29</color>
 </resources>
