@@ -4,6 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.financeapp.model.data.local.dao.BudgetCategoryDao
+import com.example.financeapp.model.data.local.dao.ExpenseDao
+import com.example.financeapp.model.data.local.dao.IncomeDao
 import com.example.financeapp.model.data.local.entity.BudgetCategory
 import com.example.financeapp.model.data.local.entity.Expense
 import com.example.financeapp.model.data.local.entity.Income
