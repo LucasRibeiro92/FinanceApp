@@ -7,12 +7,24 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/total_income"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_margin="16dp"
-        android:text="Total Income: $0" />
+        android:text="ONEBUDGET"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:textColor="@color/myyellow2"/>
+
+    <TextView
+        android:id="@+id/total_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Total Income: $0"
+        android:layout_below="@id/tvHeader"
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/total_expenses"
@@ -20,7 +32,8 @@
         android:layout_height="wrap_content"
         android:text="Total Expenses: $0"
         android:layout_below="@id/total_income"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/budget_overview"
@@ -28,7 +41,8 @@
         android:layout_height="wrap_content"
         android:text="Budget Overview"
         android:layout_below="@id/total_expenses"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:textSize="14sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/transaction_list"
@@ -44,5 +58,9 @@
         android:text="Add Transaction"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="@android:integer/config_shortAnimTime"/>
 </RelativeLayout>
