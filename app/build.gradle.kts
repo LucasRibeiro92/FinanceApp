@@ -52,31 +52,49 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    /*
-    //Koin
-    implementation("io.insert-koin:koin-core:3.2.2")
-    implementation("io.insert-koin:koin-android:3.2.2")
-    //Room
-    implementation("androidx.room:room-runtime:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
-    implementation("androidx.room:room-ktx:2.5.2")
-    implementation("androidx.room:room-testing:2.5.2")
-    //Lifecycle
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-    */
-    implementation("androidx.room:room-runtime:2.3.0")
-    kapt("androidx.room:room-compiler:2.3.0")
 
+    //Room
+    /*
+    *
+    * implementation("androidx.room:room-runtime:2.3.0")
+    * kapt("androidx.room:room-compiler:2.3.0")
+    *
+    * implementation("androidx.room:room-runtime:2.5.2")
+    * kapt("androidx.room:room-compiler:2.5.2")
+    * implementation("androidx.room:room-ktx:2.5.2")
+    * implementation("androidx.room:room-testing:2.5.2")
+    *
+     * */
+    implementation("androidx.room:room-runtime:2.5.0")
+    implementation("androidx.room:room-ktx:2.5.0")
+    kapt("androidx.room:room-compiler:2.5.0")
+    implementation("androidx.room:room-testing:2.5.1")
+
+    //Lifecycle
+    /*
+
+    * implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    * implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+    *
+    * */
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
 
+    //Koin
+    /*
+    * implementation("io.insert-koin:koin-core:3.2.2")
+    * implementation("io.insert-koin:koin-android:3.2.2")
+    *
+    * */
     implementation("io.insert-koin:koin-android:3.2.0")
     implementation("io.insert-koin:koin-android-compat:3.2.0")
+
     //Lottie
     implementation("com.airbnb.android:lottie:6.4.0")
+
     //Volley
     implementation("com.android.volley:volley:1.2.1")
+
     //Glide
     implementation("com.github.bumptech.glide:glide:4.15.1")
     kapt("com.github.bumptech.glide:compiler:4.15.1")

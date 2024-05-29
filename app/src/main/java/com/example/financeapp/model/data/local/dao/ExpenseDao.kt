@@ -10,7 +10,7 @@ import com.example.financeapp.utils.Constants.EXPENSE_TABLE
 @Dao
 interface ExpenseDao {
     @Insert
-    suspend fun insertExpense(expense: Expense)
+    fun insertExpense(expense: Expense)
 
     @Query("SELECT * FROM $EXPENSE_TABLE")
     fun getAllExpenses(): LiveData<List<Expense>>

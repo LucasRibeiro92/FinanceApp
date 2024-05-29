@@ -10,7 +10,7 @@ import com.example.financeapp.utils.Constants.BUDGET_CATEGORY_TABLE
 @Dao
 interface BudgetCategoryDao {
     @Insert
-    suspend fun insertBudgetCategory(budgetCategory: BudgetCategory)
+    fun insertBudgetCategory(budgetCategory: BudgetCategory)
 
     @Query("SELECT * FROM $BUDGET_CATEGORY_TABLE")
     fun getAllBudgetCategories(): LiveData<List<BudgetCategory>>
