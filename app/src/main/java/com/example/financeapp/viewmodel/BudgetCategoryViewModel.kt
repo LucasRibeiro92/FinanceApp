@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.financeapp.model.data.local.entity.BudgetCategory
+import com.example.financeapp.model.repository.BudgetCategoryRepository
 import kotlinx.coroutines.launch
 
 class BudgetCategoryViewModel(private val repository: BudgetCategoryRepository) : ViewModel() {
