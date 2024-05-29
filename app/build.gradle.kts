@@ -52,6 +52,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    /*
     //Koin
     implementation("io.insert-koin:koin-core:3.2.2")
     implementation("io.insert-koin:koin-android:3.2.2")
@@ -63,6 +64,15 @@ dependencies {
     //Lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+    */
+    implementation("androidx.room:room-runtime:2.3.0")
+    kapt("androidx.room:room-compiler:2.3.0")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+
+    implementation("io.insert-koin:koin-android:3.2.0")
+    implementation("io.insert-koin:koin-android-compat:3.2.0")
     //Lottie
     implementation("com.airbnb.android:lottie:6.4.0")
     //Volley
