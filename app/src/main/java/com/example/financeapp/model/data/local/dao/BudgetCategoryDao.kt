@@ -15,6 +15,6 @@ interface BudgetCategoryDao {
     @Query("SELECT * FROM $BUDGET_CATEGORY_TABLE")
     fun getAllBudgetCategories(): LiveData<List<BudgetCategory>>
 
-    @Query("SELECT * FROM $BUDGET_CATEGORY_TABLE WHERE category = :category LIMIT 1")
-    fun getBudgetCategory(category: String): LiveData<BudgetCategory?>
+    @Query("SELECT * FROM $BUDGET_CATEGORY_TABLE WHERE name = :name LIMIT 1")
+    fun getBudgetCategory(name: String): LiveData<BudgetCategory?>
 }
