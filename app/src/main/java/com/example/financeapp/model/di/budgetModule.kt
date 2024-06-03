@@ -13,6 +13,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val budgetModule = module {
+
     // ViewModels
     viewModel { IncomeViewModel(get()) }
     viewModel { ExpenseViewModel(get()) }
@@ -28,4 +29,5 @@ val budgetModule = module {
     single { provideIncomeDao(get()) }
     single { provideExpenseDao(get()) }
     single { provideBudgetCategoryDao(get()) }
+
 }

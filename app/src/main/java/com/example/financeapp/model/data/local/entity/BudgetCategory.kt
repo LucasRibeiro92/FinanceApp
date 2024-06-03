@@ -7,7 +7,7 @@ import com.example.financeapp.utils.Constants.BUDGET_CATEGORY_TABLE
 @Entity(tableName = BUDGET_CATEGORY_TABLE)
 data class BudgetCategory(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val category: String,
+    val name: String,
     val limit: Double
 )
 
