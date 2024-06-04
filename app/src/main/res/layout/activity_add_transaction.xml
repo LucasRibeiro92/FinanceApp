@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        android:orientation="vertical"
-        tools:context=".view.AddTransactionActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.AddTransactionActivity">
 
     <!-- Title -->
     <TextView
@@ -15,8 +13,7 @@
         android:text="Add Transaction"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:marginBottom="16dp"/>
+        android:layout_centerHorizontal="true"/>
 
     <!-- Amount Input -->
     <EditText
@@ -25,7 +22,8 @@
         android:layout_height="wrap_content"
         android:hint="Amount"
         android:inputType="numberDecimal"
-        android:marginBottom="16dp"/>
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="16dp"/>
 
     <!-- Transaction Type Radio Group -->
     <RadioGroup
@@ -33,7 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:marginBottom="16dp">
+        android:layout_below="@id/etAmount"
+        android:layout_marginTop="16dp">
 
         <RadioButton
             android:id="@+id/rbIncome"
@@ -53,14 +52,16 @@
         android:id="@+id/spinnerBudgetCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:marginBottom="16dp"/>
+        android:layout_below="@id/rgTransactionType"
+        android:layout_marginTop="16dp"/>
 
     <!-- Category Spinner -->
     <Spinner
         android:id="@+id/spinnerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:marginBottom="16dp"/>
+        android:layout_below="@id/spinnerBudgetCategory"
+        android:layout_marginTop="16dp"/>
 
     <!-- Date Picker -->
     <Button
@@ -68,12 +69,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select Date"
-        android:marginBottom="16dp"/>
+        android:layout_below="@id/spinnerCategory"
+        android:layout_marginTop="16dp"/>
 
     <!-- Save Button -->
     <Button
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save" />
-</LinearLayout>
+        android:text="Save"
+        android:layout_below="@id/btnDatePicker"/>
+
+</RelativeLayout>

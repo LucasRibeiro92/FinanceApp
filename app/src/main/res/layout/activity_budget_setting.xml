@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.BudgetSettingActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvBudgetSettingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting a budget"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/myyellow2"/>
+
+    <!-- Budget name input -->
+    <EditText
+        android:id="@+id/etBudgetName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Budget name"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:layout_below="@id/tvBudgetSettingTitle"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+    <!--
+    <NumberPicker
+        android:id="@+id/npFoodLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+        -->
+
+    <!-- Food limit input -->
+    <EditText
+        android:id="@+id/etFoodLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Food limit"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/etBudgetName"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+    <!-- Transport limit input -->
+    <EditText
+        android:id="@+id/etTransportLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Transport limit"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/etFoodLimit"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+    <!-- Entertainment limit input -->
+    <EditText
+        android:id="@+id/etEntertainmentLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entertainment limit"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/etTransportLimit"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+    <!-- Utilities limit input -->
+    <EditText
+        android:id="@+id/etUtilitiesLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Utilities limit"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/etEntertainmentLimit"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+    <!-- Other limit input -->
+    <EditText
+        android:id="@+id/etOtherLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Other limit"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/etUtilitiesLimit"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/etOtherLimit"
+        android:layout_marginTop="32dp"/>
+
+</RelativeLayout>

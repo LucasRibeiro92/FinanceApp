@@ -12,4 +12,4 @@ fun provideDatabase(context: Context): BudgetDatabase =
 
 fun provideIncomeDao(db: BudgetDatabase) = db.incomeDao()
 fun provideExpenseDao(db: BudgetDatabase) = db.expenseDao()
-fun provideBudgetCategoryDao(db: BudgetDatabase) = db.budgetCategoryDao()
+fun provideBudgetDao(db: BudgetDatabase) = db.budgetDao()

@@ -8,9 +8,9 @@ import com.example.financeapp.utils.Constants.EXPENSE_TABLE
 @Entity(
     tableName = EXPENSE_TABLE,
     foreignKeys = [ForeignKey(
-        entity = BudgetCategory::class,
+        entity = Budget::class,
         parentColumns = ["id"],
-        childColumns = ["budgetCategoryId"],
+        childColumns = ["budgetId"],
         onDelete = ForeignKey.CASCADE
     )]
 )
@@ -19,6 +19,6 @@ data class Expense(
     val amount: Double,
     val category: String,
     val date: String,
-    val budgetCategoryId: Int
+    val budgetId: Int
 )
 
