@@ -16,9 +16,9 @@ import com.example.financeapp.utils.Constants.EXPENSE_TABLE
 )
 data class Expense(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val amount: Double,
-    val category: String,
-    val date: String,
-    val budgetId: Int
+    var amount: Double,
+    var category: String,
+    var date: String,
+    var budgetId: Int
 )
 
