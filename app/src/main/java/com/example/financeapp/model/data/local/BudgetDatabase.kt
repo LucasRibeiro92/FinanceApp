@@ -12,7 +12,7 @@ import com.example.financeapp.model.data.local.entity.Expense
 import com.example.financeapp.model.data.local.entity.Income
 import com.example.financeapp.utils.Constants.BUDGET_DATABASE
 
-@Database(entities = [Budget::class, Income::class, Expense::class], version = 5)
+@Database(entities = [Budget::class, Income::class, Expense::class], version = 6)
 abstract class BudgetDatabase : RoomDatabase() {
 
     abstract fun budgetDao(): BudgetDao

@@ -16,6 +16,7 @@ import com.example.financeapp.utils.Constants.INCOME_TABLE
 )
 data class Income(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    var name: String,
     var amount: Double,
     var category: String,
     var date: String,

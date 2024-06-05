@@ -18,6 +18,7 @@ class BudgetSettingActivity : AppCompatActivity() {
         //Setup
         setupBindings()
         setupSaveButton()
+        setupBackButton()
     }
 
     private fun setupBindings() {
@@ -56,5 +57,11 @@ class BudgetSettingActivity : AppCompatActivity() {
         budgetViewModel.insertBudget(budget)
         Toast.makeText(this, "Budget saved", Toast.LENGTH_SHORT).show()
         finish()
+    }
+
+    private fun setupBackButton() {
+        binding.ivBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 }

@@ -17,13 +17,19 @@
         android:textAlignment="center"
         android:textColor="@color/myyellow2"/>
 
+    <Spinner
+        android:id="@+id/spinnerBudgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeader" />
+
     <TextView
         android:id="@+id/total_income"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Total Income: $0"
-        android:layout_below="@id/tvHeader"
+        android:layout_below="@id/spinnerBudgets"
         android:textSize="14sp"/>
 
     <TextView
@@ -56,11 +62,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Transaction"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
         android:shadowColor="@color/white"
         android:shadowDx="5"
         android:shadowDy="5"
-        android:shadowRadius="@android:integer/config_shortAnimTime"/>
+        android:shadowRadius="@android:integer/config_shortAnimTime"
+        android:layout_below="@id/transaction_list"/>
+
+    <Button
+        android:id="@+id/btnAddBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Budget"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/white"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="@android:integer/config_shortAnimTime"
+        android:layout_below="@id/btnAddTransaction"/>
 </RelativeLayout>
