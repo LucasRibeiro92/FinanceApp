@@ -1,4 +1,4 @@
-package com.example.financeapp.view
+package com.example.financeapp.ui.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

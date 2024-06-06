@@ -1,4 +1,4 @@
-package com.example.financeapp.view
+package com.example.financeapp.ui.view
 
 import android.app.DatePickerDialog
 import android.icu.util.Calendar
@@ -6,12 +6,9 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import com.example.financeapp.databinding.ActivityAddTransactionBinding
-import com.example.financeapp.model.data.local.entity.Budget
 import com.example.financeapp.model.data.local.entity.Transaction
-import com.example.financeapp.viewmodel.BudgetViewModel
-import com.example.financeapp.viewmodel.TransactionViewModel
+import com.example.financeapp.ui.viewmodel.TransactionViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddTransactionActivity : AppCompatActivity() {

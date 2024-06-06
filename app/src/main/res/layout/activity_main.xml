@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".ui.view.MainActivity">
 
     <TextView
         android:id="@+id/tvHeader"
@@ -51,7 +51,7 @@
         android:textSize="14sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transaction_list"
+        android:id="@+id/rvTransactionList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/budget_overview"
@@ -67,7 +67,7 @@
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="@android:integer/config_shortAnimTime"
-        android:layout_below="@id/transaction_list"/>
+        android:layout_below="@id/rvTransactionList"/>
 
     <Button
         android:id="@+id/btnAddBudget"

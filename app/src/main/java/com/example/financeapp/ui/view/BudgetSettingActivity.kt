@@ -1,11 +1,11 @@
-package com.example.financeapp.view
+package com.example.financeapp.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.financeapp.databinding.ActivityBudgetSettingBinding
 import com.example.financeapp.model.data.local.entity.Budget
-import com.example.financeapp.viewmodel.BudgetViewModel
+import com.example.financeapp.ui.viewmodel.BudgetViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BudgetSettingActivity : AppCompatActivity() {
@@ -16,8 +16,10 @@ class BudgetSettingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Setups
         setupBindings()
         setupSaveButton()
+        setupBackButton()
 
         // Observe the budget and populate the inputs if it exists
         budgetViewModel.getBudget().observe(this, Observer { budget ->
@@ -31,6 +33,12 @@ class BudgetSettingActivity : AppCompatActivity() {
     private fun setupBindings() {
         binding = ActivityBudgetSettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
+
+    private fun setupBackButton() {
+        binding.ivBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun setupSaveButton() {
