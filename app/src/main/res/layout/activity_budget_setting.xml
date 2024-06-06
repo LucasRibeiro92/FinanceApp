@@ -29,12 +29,12 @@
 
     <!-- Budget name input -->
     <EditText
-        android:id="@+id/etBudgetName"
+        android:id="@+id/etHealthLimit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Budget name"
+        android:hint="Health limit"
         android:textSize="16sp"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:layout_below="@id/tvBudgetSettingTitle"
         android:layout_marginTop="32dp"
         android:textColor="@color/white"
@@ -56,7 +56,7 @@
         android:hint="Food limit"
         android:textSize="16sp"
         android:inputType="numberDecimal"
-        android:layout_below="@id/etBudgetName"
+        android:layout_below="@id/etHealthLimit"
         android:layout_marginTop="16dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"/>
