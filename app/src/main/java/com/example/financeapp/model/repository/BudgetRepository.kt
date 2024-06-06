@@ -9,14 +9,26 @@ import kotlinx.coroutines.withContext
 
 class BudgetRepository(private val budgetDao: BudgetDao) {
 
-    val allBudgets: LiveData<List<Budget>> = budgetDao.getAllBudgets()
+    fun getBudget(): LiveData<Budget?> {
+        return budgetDao.getBudget()
+    }
 
     suspend fun insertBudget(budget: Budget) {
         withContext(Dispatchers.IO) {
             try {
                 budgetDao.insertBudget(budget)
-            }catch (e: Exception) {
+            } catch (e: Exception) {
                 throw GeneralError.DatabaseError("Database operation failed: ${e.message}")
+            }
+        }
+    }
+
+    suspend fun updateBudget(budget: Budget) {
+        withContext(Dispatchers.IO) {
+            try {
+                budgetDao.updateBudget(budget)
+            } catch(e: Exception) {
+                throw  GeneralError.DatabaseError("Database operation failed: ${e.message}")
             }
         }
     }

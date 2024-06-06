@@ -12,6 +12,7 @@ class BudgetViewModel(
     private val repository: BudgetRepository
 ) : ViewModel() {
 
+    /*
     private val _budgets = MutableLiveData<List<Budget>>()
     val budgets: LiveData<List<Budget>> get() = _budgets
 
@@ -25,5 +26,22 @@ class BudgetViewModel(
 
     fun insertBudget(budget: Budget) = viewModelScope.launch {
         repository.insertBudget(budget)
+    }
+    */
+
+    fun getBudget(): LiveData<Budget?> {
+        return repository.getBudget()
+    }
+
+    fun insertBudget(budget: Budget) {
+        viewModelScope.launch {
+            repository.insertBudget(budget)
+        }
+    }
+
+    fun updateBudget(budget: Budget) {
+        viewModelScope.launch {
+            repository.updateBudget(budget)
+        }
     }
 }
