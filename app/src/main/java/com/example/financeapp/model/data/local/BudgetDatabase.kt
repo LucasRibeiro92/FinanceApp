@@ -5,19 +5,16 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.financeapp.model.data.local.dao.BudgetDao
-import com.example.financeapp.model.data.local.dao.ExpenseDao
-import com.example.financeapp.model.data.local.dao.IncomeDao
+import com.example.financeapp.model.data.local.dao.TransactionDao
 import com.example.financeapp.model.data.local.entity.Budget
-import com.example.financeapp.model.data.local.entity.Expense
-import com.example.financeapp.model.data.local.entity.Income
+import com.example.financeapp.model.data.local.entity.Transaction
 import com.example.financeapp.utils.Constants.BUDGET_DATABASE
 
-@Database(entities = [Budget::class, Income::class, Expense::class], version = 6)
+@Database(entities = [Budget::class, Transaction::class], version = 7)
 abstract class BudgetDatabase : RoomDatabase() {
 
     abstract fun budgetDao(): BudgetDao
-    abstract fun incomeDao(): IncomeDao
-    abstract fun expenseDao(): ExpenseDao
+    abstract fun transactionDao(): TransactionDao
 
     companion object {
         @Volatile private var instance: BudgetDatabase? = null

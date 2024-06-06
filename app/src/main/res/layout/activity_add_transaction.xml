@@ -26,27 +26,18 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
 
-    <!-- Budget Category Spinner -->
-    <Spinner
-        android:id="@+id/spinnerBudget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvTitle"
-        android:layout_marginTop="16dp"
-        android:textAlignment="center"/>
-
-    <!-- Amount Input -->
+    <!-- Transaction name input -->
     <EditText
         android:id="@+id/etTransactionName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name"
         android:inputType="text"
-        android:layout_below="@id/spinnerBudget"
+        android:layout_below="@id/tvTitle"
         android:layout_marginTop="16dp"
         android:textColorHint="@color/white"/>
 
-    <!-- Amount Input -->
+    <!-- Trnasaction amount input -->
     <EditText
         android:id="@+id/etTransactionAmount"
         android:layout_width="match_parent"
@@ -81,12 +72,21 @@
             android:textColor="@color/white"/>
     </RadioGroup>
 
+    <!-- Budget Category Spinner -->
+    <Spinner
+        android:id="@+id/spinnerBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgTransactionType"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"/>
+
     <!-- Category Spinner -->
     <Spinner
         android:id="@+id/spinnerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rgTransactionType"
+        android:layout_below="@id/spinnerBudget"
         android:layout_marginTop="16dp"
         android:textAlignment="center"/>
 

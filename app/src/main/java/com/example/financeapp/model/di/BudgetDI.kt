@@ -10,6 +10,5 @@ fun provideDatabase(context: Context): BudgetDatabase =
         .fallbackToDestructiveMigration()
         .build()
 
-fun provideIncomeDao(db: BudgetDatabase) = db.incomeDao()
-fun provideExpenseDao(db: BudgetDatabase) = db.expenseDao()
 fun provideBudgetDao(db: BudgetDatabase) = db.budgetDao()
+fun provideTransactionDao(db: BudgetDatabase) = db.transactionDao()
