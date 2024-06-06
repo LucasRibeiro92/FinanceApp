@@ -26,17 +26,6 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
 
-    <!-- Transaction name input -->
-    <EditText
-        android:id="@+id/etTransactionName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Name"
-        android:inputType="text"
-        android:layout_below="@id/tvTitle"
-        android:layout_marginTop="16dp"
-        android:textColorHint="@color/white"/>
-
     <!-- Trnasaction amount input -->
     <EditText
         android:id="@+id/etTransactionAmount"
@@ -44,7 +33,7 @@
         android:layout_height="wrap_content"
         android:hint="Amount"
         android:inputType="numberDecimal"
-        android:layout_below="@id/etTransactionName"
+        android:layout_below="@id/tvTitle"
         android:layout_marginTop="16dp"
         android:textColorHint="@color/white"/>
 
@@ -72,21 +61,12 @@
             android:textColor="@color/white"/>
     </RadioGroup>
 
-    <!-- Budget Category Spinner -->
-    <Spinner
-        android:id="@+id/spinnerBudget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rgTransactionType"
-        android:layout_marginTop="16dp"
-        android:textAlignment="center"/>
-
     <!-- Category Spinner -->
     <Spinner
         android:id="@+id/spinnerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinnerBudget"
+        android:layout_below="@id/rgTransactionType"
         android:layout_marginTop="16dp"
         android:textAlignment="center"/>
 

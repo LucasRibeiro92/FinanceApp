@@ -13,7 +13,7 @@ class TransactionViewModel(private val repository: TransactionRepository) : View
     private val _transaction = MutableLiveData<List<Transaction>>()
     val transaction: LiveData<List<Transaction>> get() = _transaction
 
-    fun insertExpense(transaction: Transaction) = viewModelScope.launch {
+    fun insertTransaction(transaction: Transaction) = viewModelScope.launch {
         repository.insertTransaction(transaction)
     }
 }

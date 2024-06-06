@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
     /*
     * Declaring general variables
     */
-    //viewBind
     private lateinit var binding: ActivityMainBinding
     private val budgetViewModel: BudgetViewModel by viewModel()
 
@@ -29,10 +28,6 @@ class MainActivity : AppCompatActivity() {
         setupBindings()
         setupButtons()
 
-        // Observe the budgets and populate the spinner
-        budgetViewModel.getAllBudgets().observe(this, Observer { budgets ->
-            populateBudgetSpinner(budgets)
-        })
     }
 
     private fun setupBindings() {
@@ -53,10 +48,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun populateBudgetSpinner(budgets: List<Budget>) {
-        val budgetNames = budgets.map { it.name }
-        val adapter = ArrayAdapter(this, R.layout.simple_spinner_item, budgetNames)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinnerBudgets.adapter = adapter
-    }
 }
