@@ -6,22 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.view.MainActivity">
 
-    <TextView
-        android:id="@+id/tvHeader"
+    <RelativeLayout
+        android:id="@+id/lytHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_margin="16dp"
-        android:text="ONEBUDGET"
-        android:textSize="28sp"
-        android:textAlignment="center"
-        android:textColor="@color/myyellow2"/>
+        android:layout_margin="16dp">
 
-    <Spinner
-        android:id="@+id/spinnerBudgets"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvHeader" />
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MyBudget"
+            android:textSize="28sp"
+            android:textAlignment="center"
+            android:textColor="@color/myyellow2"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/btnOpenCharts"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/baseline_area_chart_24"
+            android:contentDescription="Open Charts"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/total_income"
@@ -29,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Total Income: $0"
-        android:layout_below="@id/spinnerBudgets"
+        android:layout_below="@id/lytHeader"
         android:textSize="14sp"/>
 
     <TextView

@@ -10,8 +10,9 @@ import kotlinx.coroutines.launch
 
 class TransactionViewModel(private val repository: TransactionRepository) : ViewModel()  {
 
-    private val _transaction = MutableLiveData<List<Transaction>>()
-    val transaction: LiveData<List<Transaction>> get() = _transaction
+    val allTransactions: LiveData<List<Transaction>> = repository.allTransactions
+    val totalIncome: LiveData<Double> = repository.getTotalIncome()
+    val totalExpenses: LiveData<Double> = repository.getTotalExpenses()
 
     fun insertTransaction(transaction: Transaction) = viewModelScope.launch {
         repository.insertTransaction(transaction)

@@ -1,14 +1,17 @@
 package com.example.financeapp.ui.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import com.example.financeapp.R
 import com.example.financeapp.databinding.ItemTransactionBinding
 import com.example.financeapp.model.data.local.entity.Transaction
+import com.example.financeapp.ui.viewmodel.TransactionViewModel
 
 class TransactionAdapter(
     private var transactions: List<Transaction>

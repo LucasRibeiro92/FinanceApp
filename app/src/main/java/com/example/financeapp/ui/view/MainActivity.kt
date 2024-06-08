@@ -57,13 +57,23 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, BudgetSettingActivity::class.java)
             startActivity(intent)
         }
+        binding.btnOpenCharts.setOnClickListener {
+            val intent = Intent(this, ViewReportActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun observeViewModel() {
-        transactionViewModel.transaction.observe(this) { transaction ->
-            transaction?.let {
+        transactionViewModel.allTransactions.observe(this) { transactions ->
+            transactions?.let {
                 transactionAdapter.updateTransactions(it)
             }
+        }
+        transactionViewModel.totalIncome.observe(this) { totalIncome ->
+            binding.totalIncome.text = "Total Income: $${totalIncome}"
+        }
+        transactionViewModel.totalExpenses.observe(this) { totalExpenses ->
+            binding.totalExpenses.text = "Total Expenses: $${totalExpenses}"
         }
     }
 
